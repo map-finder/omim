@@ -254,6 +254,7 @@ void PromoCatalogLayer::Handle(FeatureBuilder & feature)
 {
   if (ftypes::IsCityTownOrVillage(feature.GetTypes()))
   {
+    LOG(LINFO, (feature));
     bool found = false;
     for (auto const id : feature.GetOsmIds())
     {
